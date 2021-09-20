@@ -13,7 +13,7 @@ var patientDetails_1 = __importDefault(require("./build/routes/patientDetails"))
 require('dotenv').config();
 var app = express_1.default();
 var url = process.env.URL;
-var port = process.env.PORT || 3000;
+var port = process.env.PORT;
 var db = mongoose_1.default.connect(url, { useNewUrlParser: true, useUnifiedTopology: true, useFindAndModify: false });
 db.then(function (data) { return console.log('we connected'); })
     .catch(function (err) { return console.log('could not connect to database'); });
